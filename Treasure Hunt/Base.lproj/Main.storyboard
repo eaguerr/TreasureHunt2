@@ -78,6 +78,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RP2-Ns-GbQ">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="31"/>
                                         <state key="normal" title="Close Map"/>
+                                        <connections>
+                                            <action selector="closeMapButton:" destination="Fcd-wz-7Jk" eventType="touchUpInside" id="DSI-le-iV5"/>
+                                        </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-uh-Rmq">
                                         <rect key="frame" x="119" y="0.0" width="227" height="32"/>
@@ -86,6 +89,9 @@
                                             <segment title="Second"/>
                                             <segment title="Hybrid"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="mapChanged:" destination="Fcd-wz-7Jk" eventType="valueChanged" id="qPp-fv-BsD"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                             </stackView>
@@ -102,6 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="puw-7v-foA"/>
                     </view>
                     <navigationItem key="navigationItem" id="AZK-tN-04t"/>
+                    <connections>
+                        <outlet property="mapView" destination="ps3-yy-k5f" id="bwQ-tG-JzF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dqQ-xa-dE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
